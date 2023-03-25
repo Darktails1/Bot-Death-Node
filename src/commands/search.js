@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageEmbed } = require('discord.js');
-const basePath = './src/blacklisteds/blacklist.json';
+const basePath = './src/blacklisteds/';
 const fs = require('fs');
 
 module.exports = {
@@ -24,9 +24,9 @@ module.exports = {
 
         }
 
-        if (fs.exists(basePath, function (exists) {
+        if (fs.exists(`${basePath}${interaction.guildId}.json`, function (exists) {
             if (exists) {
-                fs.readFile(basePath, 'utf8', function readFileCallback(err, data) {
+                fs.readFile(`${basePath}${interaction.guildId}.json`, 'utf8', function readFileCallback(err, data) {
                     if (err) {
                         console.log(err)
                     } else {
