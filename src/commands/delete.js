@@ -37,19 +37,19 @@ module.exports = {
                                     if (err) console.log(err)
                                 });
                                 msg = `${stronghold} deletada`;
-                                interaction.reply({ content: `${msg}`, ephemeral: true });
+                                interaction.reply({ content: `${msg}`, ephemeral: false });
 
                             }
                             else {
                                 msg = `Nenhuma stronghold encontrada`;
-                                interaction.reply({ content: `${msg}`, ephemeral: true });
+                                interaction.reply({ content: `${msg}`, ephemeral: false });
                             }
                         
                     }
                 })
             } else {
                 msg = `Nenhuma stronghold cadastrada`;
-                interaction.reply({ content: `${msg}`, ephemeral: true });
+                interaction.reply({ content: `${msg}`, ephemeral: false });
                 }
             
 

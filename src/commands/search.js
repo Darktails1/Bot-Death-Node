@@ -40,7 +40,7 @@ module.exports = {
                             else
                             msg =`Nick blacklistado, Outros personagens:
                             ${obj[filterArray[0]]}`;
-                            interaction.reply({ content: `${msg}`, ephemeral: true });
+                            interaction.reply({ content: `${msg}`, ephemeral: false });
 
                         }else if(stronghold){
                             if(!obj[stronghold])
@@ -48,12 +48,12 @@ module.exports = {
                             else
                             msg =`Stronghold blacklistado, Outros personagens:
                             ${obj[stronghold]}`;
-                            interaction.reply({ content: `${msg}`, ephemeral: true });
+                            interaction.reply({ content: `${msg}`, ephemeral: false });
 
 
                         }else{
                             msg = `Digite ao menos 1 campo`;
-                            interaction.reply({ content: `${msg}`, ephemeral: true });
+                            interaction.reply({ content: `${msg}`, ephemeral: false });
                             return;
 
                         }
@@ -65,7 +65,7 @@ module.exports = {
             } else {
 
                     msg = `Nenhum nick cadastrado`;
-                    interaction.reply({ content: `${msg}`, ephemeral: true });
+                    interaction.reply({ content: `${msg}`, ephemeral: false });
                 }
             
 

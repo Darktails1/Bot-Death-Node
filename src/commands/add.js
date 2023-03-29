@@ -37,7 +37,7 @@ module.exports = {
 
                             if (strongholds.some(element => obj[element].includes(nick))) {
                                 msg = `nick já existe`;
-                                interaction.reply({ content: `${msg}`, ephemeral: true });
+                                interaction.reply({ content: `${msg}`, ephemeral: false });
 
                             } else if (obj[stronghold] && (!obj[stronghold].includes(nick))) {
                                 obj[stronghold].push(nick)
@@ -46,7 +46,7 @@ module.exports = {
                                     if (err) console.log(err)
                                 });
                                 msg = `${nick} adicionado`;
-                                interaction.reply({ content: `${msg}`, ephemeral: true });
+                                interaction.reply({ content: `${msg}`, ephemeral: false });
 
                             }
                             else {
@@ -58,7 +58,7 @@ module.exports = {
                                     if (err) console.log(err)
                                 });
                                 msg = `${nick} e ${stronghold} adicionado`;
-                                interaction.reply({ content: `${msg}`, ephemeral: true });
+                                interaction.reply({ content: `${msg}`, ephemeral: false });
                             }
                         
                     }
@@ -71,7 +71,7 @@ module.exports = {
                     if (err) console.log(err)
                 });
                     msg = `${nick} e ${stronghold} adicionado`;
-                    interaction.reply({ content: `${msg}`, ephemeral: true });
+                    interaction.reply({ content: `${msg}`, ephemeral: false });
                 }
             
 
