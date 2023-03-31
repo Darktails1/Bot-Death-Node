@@ -36,23 +36,23 @@ module.exports = {
                         if(nick){
                             const filterArray = strongholds.filter(element => obj[element].includes(nick))
                             if(filterArray.length == 0)
-                            msg = `Nick não blacklistado`
+                            msg = `:pepewow: NENHUM BO REGISTRADO NO NOME ACUSADO. :PepeHappy: LIBERADO PARA FAZER CONTEÚDO...POR ENQUANTO... :eyes:`
                             else
-                            msg =`Nick blacklistado, Outros personagens:
+                            msg =`:police_car: ALERTA DE CRIMINOSO!! :radioactive: CUIDADO COM ESTE MELIANTE!! :3416bonk: SUA PARTY CORRE SÉRIOS RISCOS!! :sos: FUJA IMEDIATAMENTE!!, CLONES DO MELIANTE:
                             ${obj[filterArray[0]]}`;
                             interaction.reply({ content: `${msg}`, ephemeral: false });
 
                         }else if(stronghold){
                             if(!obj[stronghold])
-                            msg = `Stronghold não blacklistado`
+                            msg = `:4379_ShrekStare: STRONGHOLD LIBERADA PARA CONTEÚDO. TA LIMPA :thumbs_up:`
                             else
-                            msg =`Stronghold blacklistado, Outros personagens:
+                            msg =`:skull_crossbones: PERIGO!!! STRONG PROIBIDA!! :rotating_light: PARE IMEDIATAMENTE A RAID :hand_splayed:, CUIDADO COM ESSES TAMBÉM:
                             ${obj[stronghold]}`;
                             interaction.reply({ content: `${msg}`, ephemeral: false });
 
 
                         }else{
-                            msg = `Digite ao menos 1 campo`;
+                            msg = `:9758christmasstarecat: Quer procurar sem colocar parâmetro meu herói? Escolhe um campo ai, é fácil (Nick ou Strong) :5394_knowledge:`;
                             interaction.reply({ content: `${msg}`, ephemeral: false });
                             return;
 

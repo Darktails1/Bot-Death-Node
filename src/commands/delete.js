@@ -36,19 +36,19 @@ module.exports = {
                                 fs.writeFile(`${basePath}${interaction.guildId}.json`, json, function readFileCallback(err) {
                                     if (err) console.log(err)
                                 });
-                                msg = `${stronghold} deletada`;
+                                msg = `:squid: Liberdade cantou para ${stronghold}`;
                                 interaction.reply({ content: `${msg}`, ephemeral: false });
 
                             }
                             else {
-                                msg = `Nenhuma stronghold encontrada`;
+                                msg = `Stronghold não encontrada. Ta limpa, por enquanto... :eyes:`;
                                 interaction.reply({ content: `${msg}`, ephemeral: false });
                             }
                         
                     }
                 })
             } else {
-                msg = `Nenhuma stronghold cadastrada`;
+                msg = `:index_pointing_at_the_viewer: Cê tem que cadastrar uma Stronghold primeiro meu herói.`;
                 interaction.reply({ content: `${msg}`, ephemeral: false });
                 }
             
